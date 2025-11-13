@@ -1,0 +1,218 @@
+body {
+    background-color: #070F2B;
+    color: #9290C3;
+}
+h1 {
+    font-size: 38px;
+}
+a {
+    text-decoration: none;
+    color: #9290C3;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+h3, h2 {
+    text-align: center;
+}
+.navbar {
+    background-image: linear-gradient(to top right, #070F2B, #535C91);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(2, 3, 48);
+    position: fixed;
+    z-index: 1000;
+}
+.left {
+    font-size: 21px;
+    margin-left: 50px;
+    transition: transform 0.5s ease;
+}
+.right {
+    font-size: 25px;
+    display: flex;
+    width: 700px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h5:hover {
+    border-radius: 5px;
+    background-color: #141e40;
+    transform: scale(1.1);
+}
+.left h1:hover {
+    transform: scale(1.05);
+}
+
+/* --- DESKTOP STYLES (Default Flex Layout) --- */
+.details {
+    margin-top: 100px;
+    margin-bottom: 120px;
+    padding: 20px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid rgb(13, 7, 48);
+    /* Removed text-align: center from here to fix desktop alignment */
+}
+.lef {
+    border: 1px solid rgb(6, 6, 42);
+    display: flex;
+    /* Changed to align-items: flex-start to align content at the top of the div */
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width: 700px;
+    /* Added text-align: left; to ensure text aligns to the left under the headings */
+    text-align: left; 
+}
+.righ {
+    border: 1px solid rgb(13, 6, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 390px;
+    width: 350px;
+    animation: bounce 3s ease infinite;
+    
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+    100% { transform: translateY(0); }
+}
+.r img {
+    border-radius: 50%;
+}
+/* Adjusted .l margins for better alignment */
+.l {
+    margin-top: 50px; /* Reduced top margin */
+    margin-left: 0; /* Removed left margin from .l as text-align: left is on .lef */
+}
+
+/* Styling for the description text (now in <p> tag) */
+.l p {
+    font-size: 19px; /* Ensure font size is appropriate */
+    white-space: pre-wrap; /* Keeps line breaks from original <pre> while allowing wrap */
+}
+
+#resume {
+    border: none;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 15px; 
+    color: #040a33;
+    background-color: #9290C3;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block; /* Essential for spacing and width */
+}
+#resume a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    line-height: 45px;
+}
+#resume:hover {
+    transform: scale(1.05);
+}
+.social-links {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.social-links img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* --- MOBILE VIEW (Max-width 768px) --- */
+@media (max-width: 768px) {
+    .navbar {
+        height: 90px;
+        flex-direction: column;
+        padding-bottom: 10px;
+    }
+    .left {
+        margin: 10px 0;
+    }
+    .right {
+        
+        width: 110%;
+        justify-content: space-around;
+        font-size: 18px;
+    }
+
+    .details {
+        flex-direction: column; /* Stacks items vertically */
+        margin-bottom: 50px;
+        margin-top: 110px;
+    }
+
+    /* Move the image to the top on mobile */
+    .righ {
+        order: -1; 
+        height: 300px;
+        width: 300px;
+        margin-bottom: 30px;
+        animation: none;
+    }
+    .r img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .lef {
+        border: 1px solid white;
+        width: 90%; 
+        height: auto;
+        text-align: center; /* CENTER text on mobile */
+        align-items: center; /* Center flex items horizontally on mobile */
+    }
+    .l {
+        margin: 0;
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .l p { 
+        font-size: 14px;
+        white-space: normal; /* Allows text to fully wrap */
+        text-align: center; /* Center description text on mobile */
+        margin-bottom: 20px;
+    }
+    #resume {
+        width: auto;
+        min-width: 150px; /* Set a minimum width */
+        height: 40px;
+        margin: 5px;
+        font-size: 14px;
+    }
+    #resume a {
+        line-height: 40px;
+    }
+    .social-links {
+        gap: 15px;
+    }
+    .social-links img {
+        width: 50px;
+        height: 50px;
+    }
+}

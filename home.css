@@ -1,0 +1,247 @@
+/* ====== Global Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070F2B;
+  color: #9290C3;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-image: linear-gradient(to top right, #070F2B, #535C91);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(2, 3, 48);
+  padding: 0 30px;
+  z-index: 1000;
+}
+
+.navbar .left h1 a {
+  text-decoration: none;
+  color: #9290C3;
+}
+
+.left h1:hover {
+  transform: scale(1.05);
+}
+
+.right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.right a {
+  text-decoration: none;
+  color: #9290C3;
+  font-size: 20px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.right a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* ====== Hero Section ====== */
+.details {
+  margin-top: 100px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.lef {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  padding: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.l h1 {
+  line-height: 1.4;
+}
+
+.l pre {
+  font-size: 16px;
+  color: #9290C3;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+button {
+  background-color: #9290C3;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #a8a7e6;
+  transform: scale(1.05);
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ====== Right Section (Image) ====== */
+.righ {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 3s ease infinite;
+  margin-top: 30px;
+}
+
+.r img {
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(30px); }
+  100% { transform: translateY(0); }
+}
+
+/* ====== Footer ====== */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 1px solid rgb(9, 6, 45);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-links img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.3);
+}
+
+/* ====== Responsive Design ====== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .right a {
+    font-size: 18px;
+  }
+
+  .r img {
+    height: 270px;
+    width: 270px;
+  }
+
+  .l pre {
+    font-size: 15px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .right a {
+    font-size: 16px;
+  }
+
+  .details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .l h1 {
+    font-size: 28px;
+  }
+
+  .r img {
+    height: 250px;
+    width: 250px;
+  }
+
+  pre {
+    text-align: center;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navbar h1 {
+    font-size: 22px;
+  }
+
+  .right a {
+    font-size: 14px;
+  }
+
+  .r img {
+    height: 200px;
+    width: 200px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .social-links img {
+    width: 60px;
+    height: 60px;
+  }
+}
