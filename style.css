@@ -24,17 +24,16 @@
             position: fixed;
             z-index: 1000;
         }
-
+        
         .left{
-            font-size: 21px;
-            margin-left: 50px;
+            margin-left: 4%;
             transition: transform 5s ease;
         }
         
         .right{
-            font-size: 25px;
+            font-size: 160%;
             display: flex;
-            width: 700px;
+            width: 60%;
             justify-content: space-evenly;
             align-items: center;
         }
